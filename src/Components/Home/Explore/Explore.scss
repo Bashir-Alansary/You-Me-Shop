@@ -1,0 +1,105 @@
+.explore {
+    position: relative;
+    padding-bottom: 270px;
+    background: #f8fafc;
+    @media only screen and (max-width: 600px) {
+        padding-bottom: 120px;
+    }
+    .content {
+        @media only screen and (max-width: 600px) {
+            flex-wrap: wrap;
+        }
+        .box {
+            position: relative;
+            width: 31%;
+            height: 300px;
+            text-decoration: none;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 2px 8px 40px rgba(0,0,0,.08);
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+    
+            &:hover .see-btn {
+                color:rebeccapurple
+            }
+    
+            &:hover .see-btn .arrow {
+                transform: translateX(80%);
+            }
+            
+            .box-content {
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                z-index: 1;
+    
+                .img-num {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 25px;
+    
+                    img {
+                        border-radius: 50%;
+                        background: #f6f6f6;
+                    }
+    
+                    span{
+                        color: #000;
+                    }
+                }
+            }
+    
+            .title {
+                h2 {
+                    margin-top: 0;
+                    font-size: 19px;
+                    letter-spacing: 1.5px;
+                    font-weight: 600;
+                    color: #000;
+                }
+    
+                .type {
+                    color: #999;
+                    font-size: 14px;
+                }
+            }
+    
+            .see-btn {
+                position: absolute;
+                bottom: 0;
+                color: #000;
+                transition: 0.2s;
+                display: flex;
+                align-items: center;
+    
+                .arrow {
+                    transition: 0.5s;
+                    font-size: 20px;
+                    transform: translateX(0);
+                }
+            }
+    
+            .bc-img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 0;
+    
+                img {
+                    width: 300px;
+                }
+            }
+            
+        }
+    }
+
+    div.gradient {
+        background: linear-gradient(180deg,#f8fafc, #fdfdfb);
+    }
+    
+}

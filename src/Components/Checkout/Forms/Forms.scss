@@ -1,0 +1,193 @@
+.forms {
+    $inputPaddRL: 12px;
+    $specialBorder: 1px solid #d8d7d7;
+    $specialRadius: 4px;
+    width: 55%;
+    $titleMargen: 15px;
+    @media only screen and (max-width: 600px) {
+        
+    }
+    .box {
+        margin-bottom: 20px;
+        &:first-of-type {margin-top: 30px;}
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    label:not(.inside), span, .login-link, input::placeholder {font-size: 13px;}
+
+    .input-content:not(.flx), .input-content:has(.back) {
+        input:not(input[type="checkbox"]), select {
+            width: 100%
+        }
+    }
+
+    .input-content.flx2 {
+        & > input, > select, > .back {
+            width: 48%
+        }
+    }
+
+    .input-content.flx3 {
+        & > input, > select, > .back {
+            width: 31%
+        }
+    }
+
+    .in { position: relative; }
+
+    label.show, input::placeholder, .method span { color: #707070; }
+
+    .input-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 13px;
+        .back {
+            background: #fff;
+        }
+
+        &:not(.flx) {
+            .back {width: 100%;}
+        }
+
+        input:not(input[type="checkbox"]), select {
+            height: 48px;
+            padding: 10px $inputPaddRL;
+            outline: $specialBorder;
+            border: none;
+            border-radius: $specialRadius;
+            background: transparent;
+            transition: outline-color 0.5s !important; // important caz of select
+            &:focus {outline: 2px solid #000;}
+        } 
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            accent-color: #000;
+        }
+
+        select {
+            border-right: $inputPaddRL solid transparent;
+        }
+
+        &:has(.input-icon) {
+            position: relative;
+            .input-icon {
+                position: absolute;
+                right: $inputPaddRL;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                color: #707070;
+                z-index: 5;
+            }
+        }
+
+        label.inside {
+            position: absolute;
+            left: $inputPaddRL + 3px;
+            font-size: 11px;
+            transition: 0.5s;
+            z-index: 1;
+            &.show {
+                top: 5px;
+                opacity: 1;
+                & + input, + select, + div input, + div select {
+                    position: relative;
+                    padding-top: 20px;
+                    transition: 0.5s;
+                    z-index: 1;
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+            }
+            &.hide {
+                top: 7px;
+                opacity: 0;
+                & + input, + select, + div input, + div select {
+                    padding-top: 10px;
+                    transition: 0.5s;
+                    z-index: 2;
+                    &::placeholder {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+
+    }
+
+    .contact {
+        .title {
+            align-items: center;
+            h3 {margin: 0;}
+            .login-link {color: #000;}
+            margin-bottom: $titleMargen;
+        }
+    }
+
+    .delivery {
+        .shipping {
+            .method {
+                width: 100%;
+                padding: 18px;
+                background: #f5f5f5;
+            }
+        }
+    }
+
+    .payment {
+        .inputs {
+            background: #f4f4f4;
+            border-radius: $specialRadius;
+            
+        }
+        .credit {
+            height: 58px;
+            align-items: center;
+            padding: 0 20px;
+            margin-top: 20px;
+            border-top-left-radius: $specialRadius;
+            border-top-right-radius: $specialRadius;
+            border: 1px solid #000;
+        }
+
+        .content {
+            padding: 20px;
+            border-bottom: $specialBorder;
+            border-left: $specialBorder;
+            border-right: $specialBorder;
+            border-bottom-left-radius: $specialRadius;
+            border-bottom-right-radius: $specialRadius;
+            .billing {
+                &.show {display: block;}
+                &.hide {display: none;}
+            }
+        }
+    }
+
+    .pay-btn {
+        .btn {
+            width: 100%;
+            height: 55px;
+            background: #000;
+            color: #fff;
+            font-size: 20px;
+            border-radius: $specialRadius;
+        }
+    }
+}

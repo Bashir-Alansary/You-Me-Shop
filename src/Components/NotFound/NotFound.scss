@@ -1,0 +1,27 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #f6f6f6, transparent);
+    .content {
+        img {
+            width: 400px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-btn {
+            width: fit-content;
+            margin: 25px auto;
+            .special-btn {
+                width: 250px;
+            }
+        
+        }
+    }
+}

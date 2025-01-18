@@ -1,0 +1,15 @@
+.blank {
+    text-align: center;
+    img:not(.subcart img) {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .special-btn {
+        width: 260px;
+        margin: 30px auto;
+    }
+}

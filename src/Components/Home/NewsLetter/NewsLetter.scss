@@ -1,0 +1,111 @@
+.newsletter {
+    position: relative;
+    background: #fdfdfb;
+    padding-bottom: 120px;
+
+    .content {
+        align-items: center;
+        & > div {
+            width: 46%;
+            @media only screen and (max-width: 600px) { 
+                width: 100%;
+            }
+        }
+
+        .imgbx {
+            @media only screen and (max-width: 600px) { 
+                display: none;
+            }
+            img {
+                width: 100%;
+                margin-top: -70px;
+            }
+        }
+
+        .text {
+            h1 {
+                font-size: 45px;
+                margin-bottom: 0;
+                @media only screen and (max-width: 600px) { 
+                    font-size: 37px;
+                }
+            }
+
+            p {
+                font-size: 30px;
+                font-weight: 600;
+                color: #bf72ac;
+                font-family: 'Allison', cursive;
+                margin-top: 0;
+                @media only screen and (max-width: 600px) { 
+                    font-size: 28px;
+                    font-weight: 600;
+                    color: #bf72ac;
+                    font-family: 'Allison', cursive;
+                    margin-top: 20px;
+                }
+            }
+
+            .features {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    margin-bottom: 10px;
+
+                    .num {
+                        $val: 33px;
+                        display: inline-block;
+                        background: #f6f6f6;
+                        width: $val;
+                        height: $val;
+                        line-height: $val;
+                        text-align: center;
+                        font-size: 13px;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                    }
+                }
+                
+            }
+
+            .subscribe {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                input {
+                    width: 415px;
+                    height: 47px;
+                    padding: 10px 25px;
+                    border-radius: 25px;
+                    border: 1px solid #abc5f5;
+                    transition: 0.5s;
+                    @media only screen and (max-width: 600px) { 
+                        width: 100%;
+                    }
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 1px 15px #c4d4f3;
+                        border: 1px solid #dde8fd;
+                    }
+                }
+
+                button {
+                    width: 43px;
+                    height: 43px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    border: none;
+                    border-radius: 50%;
+                    margin-left: -46px;
+                    background: #0f172a;
+                    color: #f6f6f6;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

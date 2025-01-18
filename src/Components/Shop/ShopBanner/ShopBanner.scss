@@ -1,0 +1,33 @@
+.banner {
+    .categories {
+        @media only screen and (max-width: 600px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        display: flex;
+        align-items: center;
+        h1 {
+            margin-right: 10px;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .other-categories {
+            display: flex;
+            li {
+                display: flex;
+                .slash {
+                    margin: 0 5px;
+                    display: block;
+                }
+                .link {
+                    color: #999;
+                    @media only screen and (max-width: 600px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

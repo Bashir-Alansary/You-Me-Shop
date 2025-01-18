@@ -1,0 +1,65 @@
+.cart {
+    td {
+        span {
+            font-size: 14px;
+            &.size {margin-right: 20px;}
+            b {
+                color: rgb(62, 19, 105);
+            }
+        }
+
+        input {
+            border: none;
+            background: transparent;
+            text-align: center;
+            width: 40px;
+        }
+    }
+
+    .final-details {
+        margin: 40px 0;
+        padding: 20px;
+        background: #f5f5dc;
+        .promocode {
+            input {
+                height: 40px;
+                outline: none;
+                padding: 5px 10px;
+                border: 1px solid #d7d7d7;
+                font-size: 15px;
+            }
+        }
+
+        button {
+            height: 40px;
+            border: none;
+            padding: 5px 10px;
+            font-size: 15px;
+            background: rebeccapurple;
+            color: #fff;
+        }
+
+        .total {
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            b {
+                letter-spacing: 1.3px;
+                margin-right: 10px;
+                font-size: 20px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 17px;
+                letter-spacing: 1.5px;
+                color: rebeccapurple;
+            }
+        }
+
+        .update-cart {
+            .special-btn {
+                width: 120px;
+            }
+        }
+    }
+}

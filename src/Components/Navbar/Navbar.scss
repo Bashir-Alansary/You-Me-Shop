@@ -1,0 +1,268 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(180deg,#d5d5d5, #f6f6f6);
+    &.active {
+        box-shadow: 0 1px 15px #221e1e26;
+    }
+
+    .container {
+        height: 100%;
+
+        &>.content {
+            align-items: center;
+            height: 100%;
+
+            .logo {
+                width: fit-content;
+                img {
+                    width: 100px;
+                    @media only screen and (max-width: 600px) {
+                        width: 90px;
+                    }
+                }
+            }
+
+            .main-links {
+                display: flex;
+                align-items: center;
+                @media only screen and (max-width: 600px) {
+                    flex-direction: column;
+                    position: absolute;
+                    top: 90px;
+                    left: 0;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    background: linear-gradient(180deg, #f6f6f6, #d7d7d7);
+                    transition: 1s;
+                    overflow: hidden;
+                }
+
+                &.show {
+                    @media only screen and (max-width: 600px) {
+                        height: 91vh;
+                    }
+                }
+
+                &.hide {
+                    @media only screen and (max-width: 600px) {
+                        height: 0;
+                    }
+                }
+
+                .links {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    @media only screen and (max-width: 600px) {
+                        flex-direction: column;
+                        padding-top: 150px;
+                        width: 100%;
+                    }
+                    li {
+                        margin-right: 20px;
+                        @media only screen and (max-width: 600px) {
+                            margin-right: 0;
+                        }
+
+                        &:first-of-type{
+                            @media only screen and (max-width: 600px) {
+                                border-top: 1px solid #fff;
+                            }
+                        }
+                        .link {
+                            position: relative;
+                            color: #000;
+                            @media only screen and (max-width: 600px) {
+                                width: 100%;
+                                text-align: center;
+                                margin-right: 0;
+                                padding: 13px 0;
+                                letter-spacing: 2px;
+                                transition: 0.5s;
+                                border-bottom: 1px solid #fff;
+                                &:hover {background: #fff;}
+                            }
+
+                            &.active {
+                                color: rebeccapurple;
+                                &:after {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: 0;
+                                    left: 25%;
+                                    width: 50%;
+                                    height: 2px;
+                                    background: #f35f26;
+                                    @media only screen and (max-width: 600px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: -2px;
+                                left: 25%;
+                                width: 50%;
+                                height: 2px;
+                                background: none;
+                                transition: 0.7s;
+                             }
+                             &.active {
+                                :after {
+                                    background: #ef8256;
+                                    bottom: 0;
+                             }
+                            }
+                        }
+                    }
+                }
+
+                .tamplates-link {
+                    position: relative;
+                    @media only screen and (max-width: 600px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .btn-content {
+                        button {
+                            display: flex;
+                            align-items: center;
+                            padding: 0;
+                            background: none;
+                            width: 100%;
+                            @media only screen and (max-width: 600px) {
+                                width: 100%;
+                                justify-content: center;
+                            }
+                            span {
+                                font-size: 16px;
+                            }
+                            .templates-icon {
+                                margin-left: 5px;
+                                font-size: 14px;
+                                color: #999;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+
+                    &.hide-pc {
+                        button.active {
+                            .templates-icon {
+                                font-size: 20px;
+                                color: red;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                    &:not(.hide-pc):hover .templates-icon{transform: rotate(45deg);}
+                    &:not(.hide-pc):hover button span,
+                    &:not(.hide-pc):hover button .templates-icon {color: #fc5d1f;}
+                }
+                    
+            }
+            
+            .options {
+                .op-btn {
+                    background: none;
+                }
+
+                .login-search {
+                    margin-right: 40px;
+                    align-items: center;
+                    @media only screen and (max-width: 600px) {
+                        margin-right: 20px;
+                    }
+
+                    .icon {
+                        font-size: 20px;
+                    }
+
+                    .wish {
+                        margin: 0 20px;
+                        @media only screen and (max-width: 600px) {
+                            display: none;
+                        }
+                    }
+
+                    .login {
+                        color: unset;
+                        @media only screen and (max-width: 600px) {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                .cart-btn {
+                    position: relative;
+
+                    img {
+                        width: 50px;
+                        @media only screen and (max-width: 600px) {
+                            width: 43px;
+                        }
+                    }
+                    
+                    span.num {
+                        $val: 16px; //var
+                        position: absolute;
+                        top: -2px;
+                        min-width: $val;
+                        height: $val;
+                        left: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 10px;
+                        background: #f35f26;
+                        padding: 2px;
+                        color: #fff;
+                        @media only screen and (max-width: 600px) {
+                            top: -5px;
+                        }
+                    }
+                }
+            }
+            .toggle {
+                @media only screen and (max-width: 600px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: end;
+                    border: none;
+                    background: none;
+                    width: 45px;
+                    padding: 0;
+                }
+
+                span {
+                    display: block;
+                    height: 2px;
+                    background: #18489f;
+                    transition: 0.5s;
+                    &.short {
+                        width: 25px;
+                        margin-bottom: 12px;
+                        &.active {
+                            transform: rotate(45deg) translate(8px, 0px);
+                        }
+                    }
+                    &.long {
+                        width: 45px;
+                        &.active {
+                            transform: rotate(-45deg) translate(10px, -2px);
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

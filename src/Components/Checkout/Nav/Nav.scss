@@ -1,0 +1,19 @@
+.checkout-nav {
+    height: 100px;
+    .container {
+        height: 100%;
+        align-items: center;
+        .logo {
+            img {
+                width: 130px;
+            }
+        }
+
+        .cart-bag {
+            .link {
+                color: #000;
+                font-size: 20px;
+            }
+        }
+    }
+}

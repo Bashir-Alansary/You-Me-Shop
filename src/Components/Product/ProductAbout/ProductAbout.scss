@@ -1,0 +1,35 @@
+.product-about {
+    margin-top: 100px;
+    .parties {
+        display: flex;
+        border-bottom: 1px solid #eeecec;
+        @media only screen and (max-width: 600px) {
+            justify-content: center;
+        }
+        .part {
+            margin: 20px;
+            button {
+                background: none;
+                border: none;
+                font-size: 18px;
+                padding: 10px 0;
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                transition: 0.5s;
+                @media only screen and (max-width: 600px) {
+                    font-size: 16px;
+                }
+                &.active-part {
+                    border-bottom: 2px solid #410486;
+                }
+            }
+        }
+    }
+    .part-content {
+        margin: 40px 0;
+    }
+
+    .table td {
+        padding: 5px 0;
+    }
+}

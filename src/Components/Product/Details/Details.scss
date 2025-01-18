@@ -1,0 +1,183 @@
+.details {
+    width: 48%;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+    .category {
+        text-transform: uppercase;
+    }
+
+    .stars {
+        display: flex;
+        margin-top: 20px;
+        span {
+            &:not(.num) {
+                display: flex;
+                color: #ffcd00;
+                font-size: 19px;
+            }
+        }
+
+        .num {
+            font-size: 14px;
+        }
+    }
+
+    .price {
+        span {
+            font-size: 20px;
+            &.old-price {
+                color: #0fb3c959;
+                margin-left: 40px;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    .info {
+        margin: 20px 0;
+        color: #999;
+    }
+
+    .sizes {
+        display: flex;
+        margin-bottom: 20px;
+        .size {
+            margin-right: 10px;
+            width: 55px;
+            height: 45px;
+            cursor: pointer;
+            background: #f9f9f9;
+            border: 1px solid #ededed;
+            transition: 0.5s;
+            &.active{
+                background: #d9f0f3;
+              }
+        }
+    }
+
+    .add-to-cart {
+        $radiusVal: 5px;
+        margin-bottom: 20px;
+        .inputs-content {
+            display: flex;
+            margin-bottom: 10px;
+            .amount {
+                display: flex;
+                margin-right: 20px;
+                &.disabled {
+                    display: none;
+                }
+
+                .num {
+                    input {
+                        width: 47px;
+                        height: 42px;
+                        padding: 3px;
+                        text-align: center;
+                        border: 1px solid #e2e2e2;
+                        color: rebeccapurple;
+                        border-top-left-radius: $radiusVal;
+                        border-bottom-left-radius: $radiusVal;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .control {
+                    width: 25px;
+                    height: 42px;
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 21px;
+                        border: none;
+                        cursor: pointer;
+                        outline: none;
+                        &:first-of-type {
+                            background: #e9e7e7;
+                        }
+                        &:last-of-type {
+                            background: #e1e1e1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .add {
+            width: 237px;
+            height: 42px;
+            line-height: 42px;;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-top-right-radius: $radiusVal;
+            border-bottom-right-radius: $radiusVal;
+            background: #d7d7d7;
+            border: 1px solid #c9c9c9;
+            &:not(.disabled) {font-size: 15px;}
+            &.disabled {
+                cursor: not-allowed;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .buy {
+        .special-btn {
+            color: #fff;
+            width: 330px;
+            text-transform: uppercase;
+        }
+    }
+
+    .interact {
+        display: flex;
+        .box {
+            width: fit-content;
+            margin-right: 30px;
+            @media only screen and (max-width: 600px) {
+                    margin-right: 29px;
+            }
+            .icon-btn {
+                background: none;
+                border: none;
+                padding: 0;
+                span {
+                    font-size: 14px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .payment-methods {
+        display: flex;
+        .method {
+            margin-right: 15px;
+            img {
+                width: 45px;
+            }
+        }
+    }
+
+    .link {
+        color: #000;
+    }
+
+    .item-colors {
+        margin-bottom: 20px;
+        .color-btn {
+            &.active {
+                border: 2px solid transparent !important;
+            }
+        }
+    }
+}

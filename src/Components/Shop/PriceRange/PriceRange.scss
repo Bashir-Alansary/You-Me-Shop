@@ -1,0 +1,84 @@
+.price-range {
+    @media only screen and (max-width: 600px) {
+        padding: 0 20px;
+    }
+    .slider {
+        $val: 5px;
+        position: relative;
+        height: $val;
+        background: #ddd;
+        border-radius: $val/2;
+        @media only screen and (max-width: 600px) {
+            margin-top: 20px;
+        }
+
+        .bar {
+            position: absolute;
+            height: $val;
+            left: 0;
+            right: 0;
+            background: rebeccapurple;
+            border-radius: $val/2;
+        }
+
+        .range-inputs {
+            position: relative;
+            input {
+                position: absolute;
+                height: $val;
+                width: 100%;
+                background: none;
+                -webkit-appearance: none;
+                pointer-events: none;
+                margin: 0;
+                &[type=range]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    background: #e9e4e4;
+                    border: 1px solid rebeccapurple;
+                    border-radius: 50%;
+                    pointer-events: auto;
+                    cursor: grabbing;
+                }
+            }
+        }
+    }
+
+    .num-inputs {
+        margin-top: 30px;
+        .num-input {
+            position: relative;
+            width: 120px;
+            input {
+                width: 100%;
+                padding-left: 10px;
+                background: #f8f8f8;
+                border: 1px solid #e9e4e4;
+                margin-top: 5px;
+                color: rebeccapurple;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &:after {
+                content: "$";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            input, &:after {
+                height: 38px;
+                border-radius: 5px;
+            }
+
+            
+        }
+    }
+}
+

@@ -1,0 +1,121 @@
+.reviews {
+    .content {
+        & > div, > form {
+            width: 48%;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+        padding: 50px 0;
+        .list {
+            max-height: 500px;
+            overflow-y: auto;
+            @media only screen and (max-width: 600px) {
+                max-height: 337px;
+            }
+            .review {
+                padding: 10px;
+                display: flex;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #f1efef;
+            
+                .imgbx img {
+                    $val: 70px;
+                    width: $val;
+                    height: $val;
+                    object-fit: cover;
+                }
+            
+                .details {
+                    margin-left: 20px;
+                    .rate {
+                        display: flex;
+                        font-size: 13px;
+                    }
+                    h4 {
+                        text-transform: uppercase;
+                        color: rgb(83, 52, 117);
+                        margin: 0;
+                        font-size: 15px;
+                    }
+                    .date {
+                        font-size: 11px;
+                    }
+                    p {
+                        color: #888;
+                        font-size: 14px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        form {
+            @media only screen and (max-width: 600px) {
+                margin-top: 50px;
+            }
+            textarea {
+                width: 100%;
+                height: 100px;
+                margin-bottom: 30px;
+                padding: 10px;
+                border: 1px solid #e7e4e4;
+            }
+
+            input {
+                width: 49%; 
+                height: 47px;
+                padding: 10px;
+                border: 1px solid #e7e4e4;
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                }
+                &[name="name"] {
+                    margin-right: 2%;
+                    @media only screen and (max-width: 600px) {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            input, textarea {
+                &:focus {
+                    outline: none;
+                    border-bottom: 2px solid #c2a4f3;
+                }
+                @media only screen and (max-width: 600px) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .submit {
+                margin-top: 30px;
+                border: none;
+                width: 100px;
+                height: 45px;
+                font-size: 16px;
+                background: rgb(83, 52, 117);
+                color: #fff;
+            }
+
+            
+        }
+
+        /* stars */
+        .stars {
+            margin-bottom: 10px;
+
+            button {
+                border: none;
+                background: none;
+                cursor: pointer;
+                padding: 0;
+                
+                .star {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+}

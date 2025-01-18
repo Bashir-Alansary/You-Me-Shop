@@ -1,0 +1,82 @@
+.compare {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0;
+        @media only screen and (max-width: 600px) {
+            justify-content: space-between;
+        }
+        .box {
+            position: relative;
+            width: 23%;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #f5f2f2;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            @media only screen and (max-width: 600px) {
+                width:48%;
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            .imgbx {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text h3 {
+                font-size: 18px;
+                margin: 20px 0;
+                color: #000;
+                @media only screen and (max-width: 600px) {
+                    font-weight: normal;
+                }
+            }
+
+            .remove {
+                position: absolute;
+                bottom: -25px;
+                left: 40%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background: #fff;
+                border-radius: 50%;
+                border: 2px solid #f5f2f2;
+                padding: 0;
+                &:hover {
+                    background: #f5f2f2;
+               }
+
+               &:hover .remove-icon {
+                color: #000;
+                }
+
+               .remove-icon {
+                font-size: 26px;
+                color: rgb(143, 125, 125);
+                transition: 0.5s;
+                }
+            }
+
+            .special-btn {
+                width: 200px;
+                margin: 10px auto 30px;
+                font-size: 16px;
+                @media only screen and (max-width: 600px) {
+                        width: 180px;
+                }
+            }
+        }
+    }
+}

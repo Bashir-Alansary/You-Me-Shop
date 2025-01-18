@@ -1,0 +1,17 @@
+.checkout {
+    $paddVal: 35px;
+    $rFPaddVal: 135px;
+    $borderVal: 1px solid #dedede;
+    .forms {
+        padding: $paddVal $paddVal $paddVal $rFPaddVal;
+        border-right: $borderVal
+    }
+    .items-list {padding: $paddVal $rFPaddVal $paddVal $paddVal;}
+    .checkout-nav {border-bottom: $borderVal}
+    .forms, .items-list {
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            padding: 25px;
+        }
+    }
+}

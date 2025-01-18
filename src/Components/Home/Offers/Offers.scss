@@ -1,0 +1,81 @@
+.offers {
+    position: relative;
+    background: #f6f6f6;
+    padding-bottom: 120px;
+    .content {
+        align-items: center;
+        @media only screen and (max-width: 600px) {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }
+        & > div {
+            width: 43%;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+
+        .text {
+            @media only screen and (max-width: 600px) {
+                text-align: center;
+            }
+            h1 {
+                font-size: 60px;
+                letter-spacing: 2px;
+                margin-bottom: 0;
+                font-weight: 600;
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                    font-size: 40px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+            span {
+                display: block;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 45px;
+                text-decoration: underline;
+                color: #bf72ac;
+                font-family: 'Allison', cursive;
+                @media only screen and (max-width: 600px) {
+                    margin-bottom: 20px;
+                }
+            }
+            .link {
+                border: none;
+                padding: 16px 41px;
+                width: fit-content;
+                font-size: 16px;
+                text-transform: uppercase;
+                background: #1948a0;
+                color: #fff;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover {
+                    background: #11316d;
+                }
+                @media only screen and (max-width: 600px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .imgbx {
+        img {
+            width: 100%;
+        }
+    }
+
+    div.gradient {
+        background: linear-gradient(180deg, #f6f6f6, #f8fafc);
+    }
+
+    img.wave.top {
+        top: 0;
+        transform: rotate(180deg);
+    }
+}
